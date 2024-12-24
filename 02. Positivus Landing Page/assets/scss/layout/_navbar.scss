@@ -1,0 +1,91 @@
+// HEADER
+.header__navbar {
+  display: flex;
+  justify-content: space-between;
+  margin: calc(10px + 1vw);
+  .header__logo {
+    display: flex;
+    gap: 10px;
+  }
+}
+.header__list,
+.header__button {
+  display: none;
+}
+
+/* Ümumi burger üslubu */
+.burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: clamp(25px, 5vw, 40px);
+  height: clamp(20px, 3vw, 30px);
+  cursor: pointer;
+  margin-right: calc(10px + 2vw);
+  div {
+    background-color: #333;
+    height: 3px;
+    width: 100%;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+// Desktop
+@media screen and (min-width: 993px) {
+  body,
+  html {
+    font-size: 16px;
+  }
+
+  // Header
+  .burger {
+    display: none;
+  }
+
+  .header__logo--img {
+    width: calc(30px + 1vw);
+    height: calc(30px + 1vw);
+  }
+  .header__logo--title {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 20px 30px -10px;
+  }
+  .header__navbar--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // border: 1px solid red;
+    gap: calc(30px + 2vw);
+    margin-right: 30px;
+
+    a {
+      text-decoration: none;
+      color: rgba(0, 0, 0, 1);
+      font-family: Space Grotesk;
+      font-size: clamp(16px, 1.5vw, 20px);
+      font-weight: 400;
+      line-height: 28px;
+      text-align: left;
+    }
+    .header__list,
+    .header__button {
+      display: flex;
+    }
+    .header__button {
+      font-family: Space Grotesk;
+      font-size: clamp(14px, 1.25vw, 18px);
+      font-weight: 400;
+      line-height: 28px;
+      text-align: center;
+      border: 1px solid rgba(25, 26, 35, 1);
+      border-radius: 6px;
+      padding: 10px;
+      background-color: white;
+      cursor: pointer;
+    }
+
+    .header__list {
+      gap: calc(20px + 2vw);
+    }
+  }
+}

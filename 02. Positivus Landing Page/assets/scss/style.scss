@@ -1,0 +1,40 @@
+// abstracts
+@import "abstracts/mixins";
+
+// base
+@import "base/reset";
+@import "base/typography";
+
+// components
+@import "components/buttons";
+
+// layout
+@import "layout/navbar";
+@import "layout/section";
+@import "layout/footer";
+
+// pages
+@import "pages/home";
+
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+$font-family: Abril Fatface;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family;
+}
+// /* :root {
+
+// } */
+
+html,
+body {
+  font-size: 16px;
+}
+
+// .header {
+//   display: flex;
+//   justify-content: baseline;
+//   align-items: baseline;
+// }

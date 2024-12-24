@@ -1,0 +1,123 @@
+.section__nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // width: clamp(700px, 50vw, 800px);
+  .section__nav--img {
+    width: clamp(600px, 50vw, 429px);
+    height: clamp(515px, 50vh, 310px);
+  }
+}
+.logo-svg {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 25px;
+  gap: 30px;
+}
+
+.section__service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.section__service--title {
+  // max-width: 50vw;
+  text-align: center;
+  //styleName: h2 mob;
+  font-family: Space Grotesk;
+  font-size: clamp(27px, 2.5vw, 45px);
+  font-weight: 500;
+  line-height: 45.94px;
+  span {
+    background-color: rgba(185, 255, 102, 1);
+  }
+}
+
+.section__service--text {
+  //styleName: p mob;
+  font-family: Space Grotesk;
+  font-size: clamp(14px, 1rem, 18px);
+  max-width: 59vw;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+}
+// section card
+.section__card {
+  border: 1px solid black;
+  border-radius: 25px;
+  padding: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+// .section__card--img {
+//   // grid-template-columns: repeat(1, 2fr);
+// }
+// .section__card--one {
+//   // grid-template-columns: repeat(3, 50px);
+//   // grid-template-rows: repeat(3, 50px);
+// }
+// .section__card--text {
+//   display: none;
+// }
+// .section__card--container {
+//   display: flex;
+//   justify-content: space-evenly;
+// }
+// .section__card--text {
+//   display: none;
+// }
+// .section__card--icon {
+//   position: relative;
+//   top: 50px;
+// }
+// .section__card--box {
+// }
+// .section__card--container {
+//   display: grid;
+//   grid-template-rows: 1fr 1fr;
+//   grid-template-columns: 1fr 1fr 1fr;
+
+//   // grid-column: 1;
+//   // grid-row: 1 / 3;
+// }
+// .section__card--title {
+// }
+
+// .section__card--icon {
+//   max-width: 10vw;
+// }
+
+// .section__card--img {
+//   grid-row: 2/3;
+// }
+@media screen and (min-width: 993px) {
+  .section__nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    .section__nav--img {
+      position: absolute;
+      left: clamp(600px, 50vw, 900px);
+    }
+  }
+  .logo-svg {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin-top: 30px;
+  }
+  .section__service {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px;
+    gap: 10px;
+  }
+  .section__service--text {
+    max-width: 34vw;
+  }
+}
