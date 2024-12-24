@@ -40,8 +40,10 @@ body {
   font-size: 1rem;
   cursor: pointer;
 }
-/* NOTE 1: menu ilə logo arasında niyə hündürlük problemi var? */
-
+a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
 /* LOGO */
 .header__logo {
   display: flex;
@@ -293,7 +295,9 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-
+.home__footer-list > a {
+  color: rgba(251, 252, 254, 0.454);
+}
 .home__footer-list--item {
   padding: 2vh;
   list-style: none;
