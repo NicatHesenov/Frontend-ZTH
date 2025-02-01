@@ -564,9 +564,112 @@ console.log(
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 let fruits = ["alma", "armud", "banan", "gilas", "üzüm"];
 
+console.log(
+  numbers
+    .filter((num) => num % 2 === 0)
+    .map((kub) => kub ** 3)
+    .reduce((sum, curr) => sum + curr)
+);
+console.log(fruits.sort());
+console.log(fruits.push("portağal", "mandarin"));
+console.log(fruits.pop("portağal"));
+console.log(fruits.unshift("portağal", "mandarin"));
+console.log(fruits.shift("mandarin"));
+console.log(fruits);
+
 // Tələb olunan əməliyyatlar:
 // 1. Cüt ədədləri filter() ilə tapın
 // 2. Hər ədədin kubunu map() ilə hesablayın
 // 3. Ədədlərin cəmini reduce() ilə tapın
 // 4. Meyvələri əlifba sırası ilə düzün
 // 5. Array-ə yeni elementlər əlavə edin və silin (push, pop, shift, unshift)
+
+// ### Tapşırıq 3.2: Array-lərlə Mürəkkəb Əməliyyatlar
+let students = [
+  { id: 1, name: "Aygün", grades: [85, 90, 92] },
+  { id: 2, name: "Elçin", grades: [75, 85, 88] },
+  { id: 3, name: "Nigar", grades: [95, 88, 91] },
+  { id: 4, name: "Orxan", grades: [70, 65, 72] },
+];
+
+let average = students
+  .map(
+    (students) =>
+      students.grades.reduce((a, b) => a + b, 0) / students.grades.length
+  )
+  .sort((a, b) => a - b);
+
+let averageAbobve = average.find((students) => students > 85);
+let averageAll = average.reduce((sum, curr) => sum + curr, 0);
+
+console.log(average);
+console.log(averageAbobve);
+console.log(averageAll);
+// Tələb olunan əməliyyatlar:
+// 1. Hər tələbənin orta qiymətini hesablayın
+// 2. 85-dən yuxarı orta qiyməti olan tələbələri tapın
+// 3. Tələbələri orta qiymətə görə çoxdan aza düzün
+// 4. Bütün tələbələrin ümumi orta qiymətini tapın
+// Sual 1: documentasiyanı oxumaq
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ### Tapşırıq 4.1: Funksiya Növləri
+// Aşağıdakı funksiyaları yazın:
+// 1. Adi funksiya - faktorial hesablayan
+function factorial(n) {
+  let counter = 1;
+
+  for (let i = 2; i <= n; i++) {
+    counter *= i;
+  }
+  return counter;
+}
+
+console.log(factorial(5)); // 120
+
+// !5 =  5 *4 *3 *2 *1 = 120
+
+// 2. Arrow function - ədədin kvadratını qaytaran
+const square = (num) => (num *= num);
+
+console.log(square(5));
+
+// 3. Higher-order function - array-i filter edən funksiya qəbul edən və tətbiq edən
+function filterArray(arr, filterFn) {
+  return arr.filter(filterFn);
+}
+const number = [5, 12, 8, 3, 20];
+
+const highOrderFunction = filterArray(number, (num) => num > 10);
+
+console.log(highOrderFunction);
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+// // ## 4. Obyektlər
+// // ### Tapşırıq 4.1: Obyekt Yaratma və Metodlar
+
+// // Bank hesabı obyekti yaradın
+// let bankAccount = {
+//   accountNamber: "12847895",
+//   name: "Murad",
+//   balance: 800,
+//   transactions: [
+//     { date: "2025-10-01", type: "Ödəniş", amount: 150, description: "Market" },
+//     {
+//       date: "2025-10-02",
+//       type: "Köçürmə",
+//       amount: 500,
+//       description: "Hesaba köçürmə",
+//     },
+//   ],
+
+//   // Properties:
+//   // - hesab nömrəsi
+//   // - sahibinin adı
+//   // - balans
+//   // - əməliyyatlar array-i
+//   // Metodlar:
+//   // - pul əlavə etmə
+//   // - pul çıxarma
+//   // - balans yoxlama
+//   // - əməliyyat tarixçəsi
+// };
