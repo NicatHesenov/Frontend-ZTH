@@ -648,28 +648,149 @@ console.log(highOrderFunction);
 // // ### Tapşırıq 4.1: Obyekt Yaratma və Metodlar
 
 // // Bank hesabı obyekti yaradın
-// let bankAccount = {
-//   accountNamber: "12847895",
-//   name: "Murad",
-//   balance: 800,
-//   transactions: [
-//     { date: "2025-10-01", type: "Ödəniş", amount: 150, description: "Market" },
-//     {
-//       date: "2025-10-02",
-//       type: "Köçürmə",
-//       amount: 500,
-//       description: "Hesaba köçürmə",
-//     },
-//   ],
+let bankAccount = {
+  accountNamber: "12847895",
+  name: "Murad",
+  balance: 800,
+  transactions: [
+    { date: "2025-10-01", type: "Ödəniş", amount: 150, description: "Market" },
+    {
+      date: "2025-10-02",
+      type: "Köçürmə",
+      amount: 500,
+      description: "Hesaba köçürmə",
+    },
+  ],
 
-//   // Properties:
-//   // - hesab nömrəsi
-//   // - sahibinin adı
-//   // - balans
-//   // - əməliyyatlar array-i
-//   // Metodlar:
-//   // - pul əlavə etmə
-//   // - pul çıxarma
-//   // - balans yoxlama
-//   // - əməliyyat tarixçəsi
+  get showBalance() {
+    return `balance ${this.balance}`;
+  },
+
+  set deposit(amounts) {
+    // try {
+    //   if (amounts <= 0) {
+    //     console.log("ERROR");
+    //     throw new Error("TRY AGAIN");
+    //   } else {
+    //     console.log("Depozit...");
+    //     this.balance += amounts;
+    //   }
+    // } catch (error) {
+    //   alert("error", error.message);
+    // } finally {
+    //   alert("GOOD LUCK");
+    // }
+  },
+};
+console.log((bankAccount.deposit = 50));
+console.log((bankAccount.deposit = -200));
+console.log(bankAccount.balance);
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ## 5. Şərtlər və Dövrlər
+
+// ### Tapşırıq 5.1: Şərtli Operatorlar
+
+// const numberr = +prompt("Enter number", 0);
+// const bigNumber = +prompt("Enter number", 0);
+// numberr = numberr % 2 === 0 ? alert("true") : alert("false");
+// bigNumber = bigNumber > 3 ? alert("true") : alert("false");
+
+// const getCurrSeason = function () {
+//   const currDate = new Date();
+//   const month = currDate.getMonth() + 1;
+
+//   if (month >= 1 && month <= 3) {
+//     console.log("winter");
+//   } else if (month >= 3 && month <= 5) {
+//     console.log("spring");
+//   } else if (month >= 6 && month <= 9) {
+//     console.log("summer");
+//   } else if (month >= 9 && month <= 12) {
+//     console.log("autumn");
+//   }
 // };
+// getCurrSeason();
+
+// let numOne = parseFloat(prompt("Enter one number", 0));
+// let calcProm = prompt("Enter the number");
+// let numTwo = parseFloat(prompt("Enter two number", 0));
+// let result;
+
+// switch (calcProm) {
+//   case "+":
+//     alert((result = numOne + numTwo));
+//     break;
+//   case "-":
+//     alert((result = numOne - numTwo));
+//     break;
+//   case "/":
+//     alert((result = numOne / numTwo));
+//     break;
+//   case "*":
+//     alert((result = numOne * numTwo));
+//     break;
+
+//   default:
+//     break;
+// }
+// 1. Rəqəmin tək və ya cüt olduğunu yoxlayan funksiya
+// 2. Üç ədəddən ən böyüyünü tapan funksiya
+// 3. İlin fəslini təyin edən funksiya (ay nömrəsinə görə)
+// 4. Sadə kalkulyator (switch-case ilə)
+/////////////////////////////////////////////////////
+// ### Tapşırıq 5.2: Dövrlər
+
+let limit = 10;
+
+let oneNum = 0;
+let twoNum = 1;
+console.log(oneNum);
+console.log(twoNum);
+
+for (let i = 2; i < limit; i++) {
+  let result = oneNum + twoNum;
+
+  oneNum = twoNum;
+  twoNum = result;
+  console.log(result);
+}
+
+// 1. Fibonaççi ardıcıllığını çap edən proqram (for)
+
+let arrayRev = [1, 2, 5, 6, 7];
+let arrayEmp = [];
+let i = arrayRev.length - 1;
+
+while (i > 0) {
+  arrayEmp.push(arrayRev[i]);
+  i--;
+}
+
+console.log(arrayEmp);
+// 2. Array elementlərini tərsinə çap edən proqram (while)
+/*
+Sadə ədəd nədir? 1 və özünə bölünən ədədlərə sadə ədəd deyilir - bu riyazi bir düşüncədi
+Bəs bunu koda necə tətbiq edə bilərik? addım-addım gedək:
+Ilk öncə müəyyən bir ədəd olmalıdır ki onların üzərində dövr edək, nəticədə göydən düşəsi deyil
+Algoritma quracağımızı düşünsək hər şey addım-addım getməlidir. Yəni? Bunları saxlayacağımız bir boş array olamlıdır ki, ədədləri ona puş edək.
+Indi isə arrayləri bir-bir yoxlayan bir funuksiya yazaq - bu for dövrüdür.
+Ədədlərimiz hazır, rəgəmlərimiz hazır indi əməliyyatı icra edəcək funuksiyanı(algoritimi yazmalıyıq):
+
+
+*/
+
+// 1 Ədədlərin array formasında təyin edilməsi
+
+let numbrs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// 2 boş array
+let simpleNums = [];
+
+// 3 for of
+for (let item of Math.sqrt(numbers)) {
+  if (item % 2 === 0) {
+    simpleNums.push(item);
+  }
+}
+console.log(simpleNums);
+// 3. Sadə ədədləri tapan proqram
+// 4. Pattern çap edən proqram (ulduzlarla üçbucaq)
