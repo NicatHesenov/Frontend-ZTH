@@ -781,16 +781,956 @@ Indi isə arrayləri bir-bir yoxlayan bir funuksiya yazaq - bu for dövrüdür.
 
 // 1 Ədədlərin array formasında təyin edilməsi
 
-let numbrs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-// 2 boş array
-let simpleNums = [];
+// let numbrs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// // 2 boş array
+// let simpleNums = [];
 
-// 3 for of
-for (let item of Math.sqrt(numbers)) {
-  if (item % 2 === 0) {
-    simpleNums.push(item);
-  }
-}
-console.log(simpleNums);
+// // 3 for of
+// for (let item of Math.sqrt(numbers)) {
+//   if (item % 2 === 0) {
+//     simpleNums.push(item);
+//   }
+// }
+// console.log(simpleNums);
 // 3. Sadə ədədləri tapan proqram
 // 4. Pattern çap edən proqram (ulduzlarla üçbucaq)
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// TASK 6
+// returun uniq numbers
+// let nums = [1, 2, 3, 3, 4, 5, 5, 4, 45, 65, 76];
+
+// const uniqNumber = function (item = []) {
+//   let newArr = item.filter((i) => item.indexOf(i) === item.lastIndexOf(i));
+//   console.log(newArr);
+// };
+
+// console.log(uniqNumber(nums));
+let nums = [1, 2, 3, 3, 4, 5, 5, 4, 45, 65, 76];
+
+const uniqNum = function (num = []) {
+  let newArr = num.filter((i) => num.indexOf(i) === num.lastIndexOf(i));
+  console.log(newArr);
+};
+
+// uniqNum(nums);
+// TASK 7
+// Hər bir simvolun sayını hesabla
+let str = "Salam Azərbaycan";
+
+// Tapşırıq 1
+// let users = 10;
+
+// if (users > 0) {
+//   console.log("Müsbət ədəd");
+// } else if (users < 0) {
+//   console.log("Mənfi ədəd");
+// } else {
+//   console.log("Sıfır");
+// }
+
+// Tapşırıq 2
+// let users2 = +prompt("Enter the number", 0);
+
+// if (users2 >= 90) {
+//   console.log("A");
+// } else if (users2 >= 80 && users2 <= 89) {
+//   console.log("B");
+// } else if (users2 >= 70 && users2 <= 79) {
+//   console.log("C");
+// } else if (users2 >= 60 && users2 <= 69) {
+//   console.log("D");
+// } else {
+//   console.log("F");
+// }
+
+// Tapşırıq 3
+// let year = 2024;
+
+// if (year % 4 === 0 || year % 100 !== 0 || year % 400 === 0) {
+//   console.log("Uzun il");
+// } else {
+//   console.log("adi il");
+// }
+
+// JavaScriptə Truthy/Falsy Values
+// Tapşırıq 1.
+
+// let truthyFalsy = prompt("Enter any value");
+// if (truthyFalsy) {
+//   alert("truthy");
+// } else {
+//   alert("falsy");
+// }
+
+// Tapşırıq 2
+// let values = [
+//   true,
+//   45,
+//   -46,
+//   "true",
+//   [],
+//   {},
+//   function () {},
+//   false,
+//   0,
+//   -0,
+//   "",
+//   null,
+//   undefined,
+//   NaN,
+// ];
+
+// console.log("Truthy dəyərlər:");
+// values.forEach((value) => {
+//   if (value) {
+//     console.log(value);
+//   }
+// });
+
+// Tapşırıq 3
+
+// function truthyFalsyFunc(value1, value2) {
+//   if (value1 && value2) {
+//     alert("there is truthy");
+//   } else if (value1 || value2) {
+//     alert("only one truethy");
+//   } else {
+//     alert("There is not truthy");
+//   }
+// }
+
+// truthyFalsyFunc(45, 45);
+// truthyFalsyFunc(45, 0);
+// truthyFalsyFunc(false, null);
+
+// // Comparing Objects/Arrays
+
+// // Tapşırıq 1
+
+// let obj1 = { name: "Nijat", age: 26 };
+// let obj2 = { name: "Nijat", age: 26 };
+// let obj3 = obj2;
+// console.log(obj1 === obj2); //false
+// console.log(obj2 === obj3); //true
+// console.log(obj1.name === obj2.name); //true
+
+// Ternary Operator
+// let ternaryOperator = +prompt("Enter a number");
+
+// ternaryOperator % 2 === 0 ? console.log("Cüt ədəd") : console.log("Tək ədəd");
+// ternaryOperator > 2 ? console.log("Böyük Rəqəm") : console.log("Kiçik Rəqəm");
+////////////////////////////////////
+// Switch Case
+
+// Tapşırıq 1
+
+// let weekDay = 6;
+
+// switch (weekDay) {
+//   case 1:
+//     console.log("Monday");
+//     break;
+//   case 2:
+//     console.log("Tuesday");
+//     break;
+//   case 3:
+//     console.log("Wednesday");
+//     break;
+//   case 4:
+//     console.log("Tursday");
+//     break;
+//   case 5:
+//     console.log("Friday");
+//     break;
+//   case 6:
+//     console.log("Saturday");
+//     break;
+//   case 7:
+//     console.log("Sunday");
+//     break;
+
+//   default:
+//     console.log("That is not week");
+// }
+
+// // let numberOne = +prompt();
+
+// switch (numberOne) {
+//   case 1:
+//     alert("zero");
+//     break;
+//   case 2:
+//     alert("two");
+//     break;
+//   case 3:
+//     alert("three");
+//     break;
+
+//   case 8:
+//     alert("Eight");
+//     break;
+
+//   default:
+//     console.log("There is no number");
+// }
+
+// // Logical Operators (&&,||,!!)
+// // Tapşırıq 1 &&
+// let user1 = +prompt("Enter the number");
+// let user2 = +prompt("Enter the number");
+
+// if (user1 > 0 && user2 > 0) {
+//   alert("Hər iki ədəd müsbətdir");
+// } else {
+//   alert("Hər iki ədəd müsbət deyil");
+// }
+
+// // Tapşırıq 2 ||
+// let numberss = +prompt("Enter the number");
+
+// if (numberss > 10 || numberss < 5) {
+//   alert("Ədəd uyğundur");
+// } else {
+//   alert("Ədəd uyğun deyil");
+// }
+
+// // Tapşırıq 3!!
+// let value = prompt("Dəyər daxil edin:");
+
+// if (!!values) {
+//   console.log("It is true");
+// } else {
+//   console.log("It is false");
+// }
+/////////////////////////////////////////////////
+// FUNCTION
+
+function sum(num1, num2) {
+  let calc = {
+    toplama: num1 + num2,
+    çıxma: num1 - num2,
+    vurma: num1 * num2,
+    bölmə: num2 !== 0 ? num1 / num2 : "cannot divide by zero",
+  };
+
+  return calc;
+}
+
+const n = sum(5, 2);
+
+console.log(n);
+
+// Arrow function
+
+const calculatePower = (base, exponent = 2) => base ** exponent;
+
+console.log(calculatePower(2));
+
+// Rest operator
+
+const sum1 = function (a, b, ...c) {
+  console.log("First number:", a);
+  console.log("Second number:", b);
+  console.log("rest of number:", c);
+};
+
+console.log(sum1(12, 11, 15, 26, 28, 4, 5));
+////////////////////////////////////////////////////
+
+// Loops
+// for
+// let forNums = +prompt();
+
+// for (let i = 1; i <= forNums; i++) {
+//   if (i % 2 === 0) {
+//     console.log(i);
+//   }
+// }
+
+// For-of | For-in
+const arr = [10, 20, 30, 40, 50];
+
+for (let item of arr) {
+  console.log(item);
+}
+const obj = { name: "Ali", age: 25, city: "Baku" };
+
+for (let item in obj) {
+  console.log(`${item}: ${obj[item]}`);
+}
+
+// While | Do-While
+let y = 1;
+while (y <= 10) {
+  console.log(y);
+  y++;
+}
+let z = 1;
+let num = 5;
+do {
+  console.log(z);
+  z++;
+} while (z <= num);
+
+// Break | Countine
+for (let i = 0; i < 20; i++) {
+  console.log(i);
+
+  if (i === 15) {
+    console.log("Dövr 15-də dayandırıldı");
+    break;
+  }
+}
+for (let i = 0; i < 20; i++) {
+  if (i % 3 === 0) {
+    continue;
+  }
+  console.log(i);
+}
+
+// Arrays
+
+// Multiple ways to create an Array
+// 1.
+let arr1 = [1, 2, 3, 4, 5];
+console.log(arr1);
+// 2.
+let arr2 = Array.of(6, 7, 8);
+console.log(arr2);
+// 3.
+let arr3 = Array.from("HELLO");
+console.log(arr3);
+// 4.
+let arr4 = Array(4);
+console.log(arr4);
+
+// 5.
+
+let arr5 = ["A", "B", "C", "D", "E"];
+console.log(arr5[2]);
+arr5[1] = "JavaScript";
+console.log(arr5);
+arr5[arr5.length - 1] = "Array";
+console.log(arr5);
+
+// Array methods
+
+// Push
+let arr6 = ["A", "B", "C"];
+arr6.push("D");
+console.log(arr6);
+// Pop
+let arr7 = ["A", "B", "C"];
+let removeElement = arr7.pop();
+console.log(removeElement);
+console.log(arr7);
+// Shift
+let arr8 = ["A", "B", "C"];
+let removeElement2 = arr8.shift();
+console.log(removeElement2);
+console.log(arr8);
+// Unshift
+let arr9 = ["A", "B", "C"];
+arr9.unshift("Z");
+console.log(arr9);
+
+// Splice
+let arr10 = ["A", "B", "C", "D", "E"];
+
+arr10.splice(2, 1, "x", "y");
+arr10.splice(0, 1, "B", "Z");
+console.log(arr10);
+
+// Splice
+
+let arr11 = ["A", "B", "C", "D", "E"];
+console.log(arr11.slice(1, 4));
+console.log(arr11.slice(2));
+console.log(arr11.slice(-2));
+
+// Concat | IndexOf | LastIndexOf
+// Concat
+let arr12 = [1, 2, 3];
+let arr13 = [4, 5, 6];
+let arr14 = arr12.concat(arr13);
+console.log(arr14);
+// IndexOf
+let arr15 = ["apple", "banana", "cherry", "apple", "date"];
+console.log(arr15.indexOf("apple"));
+// LastIndexOf
+console.log(arr15.lastIndexOf("apple"));
+
+// Find || FindIndex
+let arr16 = [5, 12, 8, 130, 44];
+
+console.log(arr16.find((item) => item > 10));
+console.log(arr16.findIndex((item) => item > 10));
+
+let users = [
+  { id: 1, name: "Ali" },
+  { id: 2, name: "Veli" },
+  { id: 3, name: "Ayşe" },
+];
+
+console.log(users.find((item) => item.id === 2));
+console.log(users.findIndex((item) => item.id === 3));
+
+// Includes
+
+let fruits1 = ["apple", "banana", "cherry", "date"];
+
+console.log(fruits1.includes("banana"));
+console.log(fruits1.includes("grape"));
+console.log(fruits1.includes("cherry", 2));
+console.log(fruits1.includes("apple", 1));
+
+let numbers1 = [10, 20, 30, 40, 50];
+console.log(numbers1.includes(30));
+console.log(numbers1.includes(60));
+
+// Map | Filter | ForEach
+
+let numbers2 = [1, 2, 3, 4, 5];
+console.log(numbers2.map((item) => item * 2));
+console.log(numbers2.filter((item) => item % 2 === 0));
+let fruits2 = ["apple", "banana", "cherry", "date"];
+
+fruits2.forEach((item) => {
+  console.log(item.toUpperCase());
+});
+
+// Sort | Reverse
+
+let fruits3 = ["banana", "apple", "cherry", "date"];
+
+console.log(fruits3.sort());
+
+let numbers3 = [30, 10, 20, 50, 40];
+console.log(numbers3.sort((a, b) => a - b));
+console.log(numbers3.sort((a, b) => b - a));
+console.log(fruits3.reverse());
+console.log(numbers3.reverse());
+
+// Split | Join
+
+let sentence = "JavaScript is fun and powerful";
+let newArr = sentence.split(" ");
+let newArr2 = newArr.join(",");
+console.log(newArr);
+console.log(newArr2);
+
+let data = "apple,banana,cherry,date";
+
+let newArr3 = data.split(",").join(",").toUpperCase();
+console.log(newArr3);
+
+// Reduce
+
+const numbers4 = [10, 20, 30, 40, 50];
+
+const sumCalc = numbers4.reduce((curr, next) => curr + next, 0);
+const sumCalc1 = numbers4.reduce((curr, next) => curr * next, 1);
+const sumCalc2 = numbers4.reduce((curr, next) => (curr > next ? curr : next));
+
+console.log(`Cəm: ${sumCalc}`);
+console.log(`Hasil: ${sumCalc1}`);
+console.log(`Ən böyük ədəd: ${sumCalc2}`);
+
+// SET METHODS
+
+const numbersSet = [10, 20, 30, 10, 40, 20, 50];
+console.log("İlkin massiv:", numbersSet);
+
+const arrSet = new Set(numbersSet);
+console.log("Unikal massiv (Set):", [...arrSet]);
+
+arrSet.add(60);
+console.log("Set-ə 60 əlavə edildikdən sonra:", [...arrSet]);
+
+arrSet.delete(30);
+console.log("Set-dən 30 silindikdən sonra:", [...arrSet]);
+
+// MAP METHODS
+
+const usersMap = new Map();
+usersMap.set(1, { name: "Nijat", age: 26 });
+usersMap.set(2, { name: "Aygun", age: 30 });
+usersMap.set(3, { name: "Kamran", age: 22 });
+usersMap.set(4, { name: "Sevinc", age: 28 });
+
+usersMap.delete(3);
+console.log(usersMap);
+
+for (let [id, user] of usersMap) {
+  user.age += 5;
+}
+
+console.log(usersMap);
+
+////////////// MATH METODS /////////////
+
+// Math.Pİ
+const pi = Math.PI * 5;
+console.log(pi);
+
+// Math.round(), Math.floor(), Math.abs()
+const round = Math.round(pi);
+console.log(round);
+const floor = Math.floor(pi);
+console.log(floor);
+const abs = Math.abs(-155);
+console.log(abs);
+
+// Math.sqrt(), Math.cbrt()
+const sqrt = Math.sqrt(4);
+console.log(sqrt); //kvadrat
+const cbrt = Math.cbrt(8);
+console.log(cbrt); //kub
+
+// Math.pow()
+const pow = Math.pow(5, 3);
+console.log(pow);
+
+Math.max(), Math.min();
+const numsArr = [10, -5, 20, 0, 15];
+const min = Math.min(...numsArr);
+console.log(min);
+const max = Math.max(...numsArr);
+console.log(max);
+
+// Math.random()
+const random = Math.random();
+console.log(random);
+const randomBig = Math.random() * 10 + 1;
+console.log(randomBig);
+
+const fruitsArr = ["Apple", "Banana", "Cherry", "Orange"];
+
+const randomIndx = Math.floor(Math.random() * fruitsArr.length);
+const randomArr = fruitsArr[randomIndx];
+console.log(randomArr);
+
+// Spread operator
+
+const spread1 = [1, 2, 3];
+const spread2 = [4, 5, 6];
+const totalSpread = [...spread1, ...spread2];
+console.log(totalSpread);
+
+const spreadObject = {
+  name: "Nijat",
+  age: 26,
+};
+const totalObject = { ...spreadObject, city: "Baku" };
+console.log(totalObject);
+
+const spreadFunc = function (...sum) {
+  return sum.reduce((curr, next) => curr + next, 0);
+};
+console.log(spreadFunc(1, 2, 3));
+console.log(spreadFunc(11, 22, 33));
+
+// Numbers
+
+// toFixed
+const fixedNums = 123.4567;
+console.log(fixedNums.toFixed(1)); //Burda niyə 123.4 almaq yerinə, 123.5 alınır?
+// toPrecision
+const precisionNums = 123.4567;
+console.log(precisionNums.toPrecision(5));
+// parseFloat and  parseİnt
+console.log(parseFloat("123.45abc")); // 123.45
+console.log(parseInt("123.45abc"));
+123;
+// new Intl.NumberFloat
+const intNums = 1234567.89;
+const formatter = new Intl.NumberFormat("az-AZ", {
+  style: "currency",
+  currency: "AZN",
+});
+console.log(formatter.format(intNums));
+
+// Explicit and Implicit Castings
+let castings = "42";
+console.log(typeof Number("42"));
+console.log(typeof +castings);
+console.log(typeof !!1);
+
+const impNum = 42;
+const impStr = "10";
+console.log(impNum + impStr);
+
+//////////// STRİNG METHODS /////////////
+// replace() and replaceAll()
+const textRep = "JavaScript is fun. JavaScript is powerful.";
+console.log(textRep.replace("JavaScript", "JS"));
+console.log(textRep.replaceAll("JavaScript", "JS"));
+
+// startWith() and endWith()
+const startArr = "Hello, world!";
+console.log(startArr.startsWith("Hello"));
+console.log(startArr.endsWith("world!"));
+
+// includes()
+const incArr = "The quick brown fox jumps over the lazy dog.";
+console.log(incArr.includes("fox"));
+
+// indexOf() and lastIndexOf()
+const wordsIndex = "apple banana apple cherry";
+console.log(wordsIndex.indexOf("apple"));
+console.log(wordsIndex.lastIndexOf("apple"));
+
+// trim(), trimStart() and trimEnd()
+const messyString = "   Hello, world!   ";
+console.log(messyString.trim());
+console.log(messyString.trimStart());
+console.log(messyString.trimEnd());
+
+// toUpperCase() and toLowerCase()
+const name = "john doe";
+console.log(name.toUpperCase());
+console.log(name.toLowerCase());
+
+// padStart() and padEnd()
+const numPad = "5";
+console.log(numPad.padStart(3, "0"));
+console.log(numPad.padEnd(3, "0"));
+
+// repeat()
+const word = "Hi!";
+console.log(word.repeat(3));
+
+// slice()
+const sentenSl = "Hello, world!";
+console.log(sentenSl.slice(-6));
+
+// split()
+const fruitsSp = "apple,banana,cherry";
+console.log(fruitsSp.split(", "));
+
+// concat()
+const str1 = "Hello";
+const str2 = "World";
+console.log(str1.concat(", ", str2));
+
+/////////////////////////// ASCII //////////////////////
+
+console.log("A".charCodeAt());
+console.log(String.fromCharCode(65));
+const wordAsc = "Hello";
+console.log([...wordAsc].map((char) => char.charCodeAt()));
+const asciiCodes = [72, 101, 108, 108, 111];
+console.log(String.fromCharCode(...asciiCodes));
+
+///////////////////// String Encoding / Decoding /////////////////
+// encodeURİ  and decodeURİ
+const url = "https://example.com/search?name=John Doe&city=Baku";
+console.log(encodeURI(url));
+console.log(decodeURI(url));
+
+// encodeURIComponent və decodeURIComponent
+const param = "name=John Doe&city=Baku";
+console.log(encodeURIComponent(param));
+console.log(decodeURIComponent(param));
+
+// encodeURI, və encodeURIComponent
+const urlPart = "https://example.com/path with spaces";
+console.log(encodeURI(urlPart));
+
+const queryParam = "key=value with spaces";
+console.log(encodeURIComponent(queryParam));
+
+///////////////// Object //////////////////////////
+// More About Objects
+
+const userObj = {
+  name: "Nijat",
+  age: 26,
+  city: "Baku",
+  introduce: function () {
+    return `My name is ${this.name} and I live in Baku.`;
+  },
+};
+console.log(
+  `My name is ${userObj.name} my age is ${userObj.age} and i live in ${userObj.city}`
+);
+
+userObj.country = "Azerbaijan";
+
+console.log(userObj);
+
+delete userObj.age;
+console.log(userObj);
+
+console.log(userObj.introduce());
+console.log(userObj["city"]);
+
+// Spread Operator | Deep Copy
+const userSpr = {
+  name: "Nijat",
+  age: 26,
+  address: {
+    city: "Baku",
+    country: "Azerbaijan",
+  },
+};
+
+const userSpr2 = { ...userSpr };
+console.log(userSpr2);
+
+console.log((userSpr2.name = "Ali"));
+console.log(userSpr);
+console.log(userSpr2);
+userSpr.address.city = "Ganja";
+console.log(userSpr);
+console.log(userSpr2);
+// spread obyekti nested obyektləri(yəni non-primitiv dəyərləri) deep copy edə bilmir.
+const deepCopy = JSON.parse(JSON.stringify(userSpr));
+deepCopy.address.city = "Sumqayıt";
+console.log(userSpr);
+console.log(deepCopy);
+
+///////////////// Object Destructuring //////////////////////////
+
+// 1. Sadə Destructuring
+const userDest = {
+  names: "Nijat",
+  age: 26,
+  city: "Baku",
+  country: "Azerbaijan",
+};
+const { names, city } = userDest;
+console.log("Sadə destructuring:", names, city);
+
+// 2. Dəyişdirilmiş Adlarla Destructuring
+const { names: fullName, age: userAge } = userDest;
+console.log("Dəyişdirilmiş adlar:", fullName, userAge);
+
+// 3. Default Dəyərlər
+const settings = {
+  theme: "dark",
+  notifications: true,
+};
+const { theme, language = "en" } = settings;
+console.log("Default dəyərlər:", theme, language);
+
+// 4. İç-içə Obyektlər üçün Destructuring
+const company = {
+  namee: "TechCorp",
+  address: {
+    cities: "Baku",
+    country: "Azerbaijan",
+  },
+  employees: 500,
+};
+const {
+  namee,
+  address: { cities, country },
+} = company;
+console.log("İç-içə destructuring:", namee, cities, country);
+
+// 5. Funksiyada Destructuring
+function displayUser({ name, age }) {
+  console.log(`Funksiyada destructuring: Name: ${name}, Age: ${age}`);
+}
+const userDes = { name: "Nijat", age: 26 };
+displayUser(userDes);
+
+///////////////////// Object.create() and Object.freeze() //////////////////////
+// Object.create()
+const personPrototype = {
+  greet: function () {
+    console.log(`Hello, my name is ${this.name}`);
+  },
+};
+
+const person = Object.create(personPrototype);
+person.name = "Nijat";
+console.log(person.greet());
+console.log(person);
+
+// Object.freeze()
+const userFree = {
+  name: "Ali",
+  age: 30,
+  city: "Baku",
+};
+
+Object.freeze(userFree);
+userFree.country = "Azerbaijan";
+console.log((userFree.age = 35));
+console.log(userFree);
+
+//////////////////////// Object.defineProperty() | Object.getOwnPropertyDescription() ///////////////////
+// Object.getOwnPropertyDescriptor()
+const objectGet = {
+  name: "Nijat",
+  age: 26,
+  city: "Baku",
+};
+
+const descripter = Object.getOwnPropertyDescriptor(objectGet, "name");
+console.log(descripter);
+// Object.defineProperty()
+const descripter2 = Object.defineProperty(objectGet, "city", {
+  writable: false,
+  enumerable: false,
+  configurable: false,
+});
+objectGet.city = "Ganja";
+for (let key in objectGet) {
+  console.log(key);
+}
+console.log(descripter2);
+/////////////////// THİS KEYWORD //////////////////////////
+
+//This in Object Methods):
+const userThis = {
+  name: "Nijat",
+  age: 26,
+  introduce: function () {
+    console.log(`My name is ${this.name} and I am ${this.age} years old.`);
+  },
+};
+
+userThis.introduce(); // this burada metodun aid olduğu obyektdə isitnad edir
+
+//This in Global Context):
+console.log(this); // This burada qlobal obyekti(windows) götərir
+
+//This in Arrow Functions):
+// const person = {
+//   name: "Ali",
+//   greet: () => {
+//     console.log(`Hello, my name is ${this.name}`);
+//   },
+// }; //Arrow funksiyalarda this olmadığı üçün qlobal obyektə istinad edir.
+
+//////////////////////// CALL | APPLY | BIND //////////////////////
+/////////
+
+const personCall = {
+  name: "Nijat",
+  age: 26,
+};
+
+function greet(message) {
+  return console.log(
+    `${message} My name is ${this.name} an my age is ${this.age}`
+  );
+}
+console.log(greet.call(personCall, "Hello"));
+console.log(greet.apply(personCall, ["Hi"]));
+const greetBind = greet.bind(personCall);
+console.log(greetBind("Hey"));
+
+//////////////////// Getter | Setter //////////////////////
+
+const getSet = {
+  firstName: "Nijat",
+  lastName: "Memmedov",
+  get fullName() {
+    return `My name is ${this.firstName} and my lastname is ${this.lastName}`;
+  },
+
+  set fullName(name) {
+    const parts = name.split(" ");
+    // this.firstName = parts[0];
+    // this.lastName = parts[1];
+    this.fullName = parts[0];
+  },
+};
+
+console.log(getSet.fullName);
+console.log(getSet.fullName);
+////////////////////// Try Catch  Finally ////////////////////
+const divideNumbers = function (numerator, denominator) {
+  try {
+    if (denominator === 0) {
+      throw new Error("Cann't divide by zero");
+    }
+
+    const result = numerator / denominator;
+    console.log(result);
+  } catch (error) {
+    console.log("Error:", error.message);
+  } finally {
+    console.log("Finally block");
+  }
+};
+
+console.log(divideNumbers(10, 0));
+console.log(divideNumbers(10, 2));
+
+/////////////// Dates Overview ////////////////////
+// Date
+const today = new Date();
+const today2 = new Date(2023, 12, 25);
+const todayOne = new Date(2023, 1, 1);
+const todayTwo = new Date(2023, 12, 31);
+console.log(today2);
+// getFullYear()
+console.log(today.getFullYear());
+// getMonth()
+console.log(today.getMonth() + 1);
+// getDate()
+console.log(today.getDate());
+// getDay()
+console.log(today.getDay());
+console.log(today);
+let bigDate = todayOne > todayTwo ? "Big date" : "Small Date";
+console.log(bigDate);
+const todayThree = new Date(2023, 12, 31);
+console.log(todayThree.getDate() + 5);
+console.log(todayThree.getDate() - 2);
+/////////////////////////// Formatting Dates ////////////////////
+const todayFor = new Date();
+// toDateString()
+console.log(todayFor.toDateString());
+// toLocaleString()
+console.log(todayFor.toLocaleString());
+// console.log(todayFor.());
+// manuel config
+const config = {
+  weekday: "long",
+  year: "numeric",
+  month: "numeric",
+  day: "numeric",
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric",
+  hour12: true,
+};
+console.log(todayFor.toLocaleString("en-us", config));
+// toISOString()
+console.log(todayFor.toISOString());
+////////////////////////////// Time Stamp ////////////////////////
+console.log(Date.now());
+console.log(Math.floor(Date.now() / 1000));
+console.log(new Date().getTime());
+const date1 = new Date().getTime();
+const date2 = new Date(date1);
+console.log(date2);
+const date3 = new Date("2023,11,25");
+const date4 = new Date("2023,11,24");
+const differenceInMilliSeconds = date3 - date4;
+console.log(differenceInMilliSeconds);
+
+const differenceInSeconds = differenceInMilliSeconds / 1000;
+console.log(differenceInSeconds);
+const differenceInMinutes = differenceInMilliSeconds / 60;
+console.log(differenceInMinutes);
+const differenceInHours = differenceInMilliSeconds / 60;
+console.log(differenceInHours);
+const differenceInDays = differenceInMilliSeconds / 24;
+console.log(differenceInDays);
+
+//1. ECMAScript tam olaraq nədir?
+// 2. array və stringdə oxşar metodlar var, onlar bir-birləri ilə nədən fərqlənirlər.
+// 3. Deep və shallow kopy haqqında
+// 4. Truly və ya falsy true və false arasındaki fərq haqqında
+// 5. setter və getter metodlarının obyekt daxilində birlikdə yazılmasının əhəmiyyəti
+// 6. Arrayin orginal array üzərində dəyişiklik edən və etməyən metodları necə yadda saxlamaq olar?
+// 7. toİsostring() apilərlə işləyərkən əhəmiyyəti time zone nədir
+// 8. timeStamp niyə sırf 1970 dən başlayır, yəni sabit dəyəri var? Və tam olaraq niyə var? Date.now() ilə new Date().getTime() arasındaki fərq
