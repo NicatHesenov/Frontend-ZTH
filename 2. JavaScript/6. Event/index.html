@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Order Form</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="title">🛍️ Place Your Order</h1>
+      <h2>Test1</h2>
+      <form id="orderForm" class="form">
+        <div class="form-group">
+          <label for="product" class="label">Choose a Product:</label>
+          <select id="product" name="product" class="input select">
+            <option value="" disabled selected>Select a product</option>
+            <option value="10.5">Product A ($10.5)</option>
+            <option value="20">Product B ($20)</option>
+            <option value="30.5">Product C ($30.5)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="quantity" class="label">Quantity:</label>
+          <input
+            type="number"
+            id="quantity"
+            name="quantity"
+            class="input"
+            min="1"
+          />
+        </div>
+        <div class="form-group total-price-group">
+          <p>
+            Total Price: <span id="totalPrice" class="total-price">$0</span>
+          </p>
+        </div>
+        <button type="submit" class="btn">Place Order</button>
+      </form>
+
+      <h2 class="Test">Test</h2>
+      <div id="orderSummary" class="order-summary"></div>
+    </div>
+    <button type="submit" class="btn newBtn">Hello World</button>
+    <div class="newClass"></div>
+    <img class="newImage" src="./assets/Image.jpg" alt="Image" />
+    <button class="btnImage">Image Button</button>
+    <!-- Next task -->
+    <input type="text" id="userInput" placeholder="Enter some text" />
+    <button class="addBtn">Add to</button>
+    <ul id="list"></ul>
+
+    <button class="hideBtn">Hide Image</button>
+
+    <!-- Next task -->
+
+    <input type="text" class="nameIn" placeholder="Enter your name" />
+    <input type="text" class="ageIn" placeholder="Enter your age" />
+    <button class="fromBtn">Add from</button>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+
+      <tbody class="tableBody"></tbody>
+    </table>
+
+    <form id="myForm">
+      <label for="fname" class="label">Name</label><br />
+      <input type="text" id="fname" class="input" name="fname" /><br />
+
+      <label for="eml" class="label"> E-mail</label><br />
+      <input type="email" id="eml" class="input" name="eml" /><br />
+
+      <label for="pwd" class="label"> Password</label><br />
+      <input type="password" id="pwd" class="input" name="pwd" /><br />
+
+      <button type="submit" class="formBtn">Submit</button>
+    </form>
+  </body>
+</html>
