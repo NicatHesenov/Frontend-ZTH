@@ -1,0 +1,23 @@
+.moon {
+  display: none;
+  color: aliceblue;
+}
+.box {
+  border: 1px solid;
+  padding: 25px;
+  margin: 25px;
+  width: 200px;
+  height: 200px;
+  background-color: green;
+}
+.box-second {
+  border: 1px solid green;
+  padding: 25px;
+  margin: 25px;
+  width: 200px;
+  height: 200px;
+  background-color: white;
+}
+.input {
+  border: 1px solid green;
+}
