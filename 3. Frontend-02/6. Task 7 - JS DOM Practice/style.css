@@ -1,0 +1,46 @@
+.box {
+  border: 1px solid;
+  width: 30%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  padding: 10px;
+  margin-top: 20px;
+}
+.btn-first {
+  color: white;
+  background-color: blue;
+}
+.btn-second {
+  color: white;
+  background-color: red;
+}
+.btn-third {
+  color: white;
+  background-color: green;
+}
+/* ----------------------------------------- */
+.text {
+  display: inline-block;
+}
+/* ----------------------------------------- */
+
+/* .ball {
+  text-align: center;
+} */
+/* ----------------------------------------- */
+
+.container {
+  text-align: center;
+}
+
+.box-left {
+  margin-right: 70px;
+}
+.box-right {
+  margin-left: 70px;
+}

@@ -1,0 +1,10 @@
+.sideBarDiv {
+  border: 1px solid red;
+  width: 10%;
+  height: 80vh;
+  padding: 25px;
+  display: none;
+}
+.hidde {
+  display: flex;
+}

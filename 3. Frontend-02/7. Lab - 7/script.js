@@ -18,25 +18,25 @@ moon.addEventListener("click", () => {
 /////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////
 
-// let box = document.querySelector(".box");
+let box = document.querySelector(".box");
 
-// box.addEventListener("mouseover", () => {
-//   box.style.backgroundColor = "white";
-// });
-// box.addEventListener("mouseout", () => {
-//   box.style.backgroundColor = "green";
-// });
+box.addEventListener("mouseover", () => {
+  box.style.backgroundColor = "white";
+});
+box.addEventListener("mouseout", () => {
+  box.style.backgroundColor = "green";
+});
 ///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 
-// let boxSecond = document.querySelector(".box-second");
-// let input = document.querySelector(".input");
-// let text = document.querySelector(".text");
-// input.addEventListener("keydown", (e) => {
-//   if (e.key === "Enter") {
-//     boxSecond.innerHTML += `<p>${input.value}</p>`;
-//     input.value = "";
-//   }
-// });
+let boxSecond = document.querySelector(".box-second");
+let input = document.querySelector(".input");
+let text = document.querySelector(".text");
+input.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    boxSecond.innerHTML += `<p>${input.value}</p>`;
+    input.value = "";
+  }
+});

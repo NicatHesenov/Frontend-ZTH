@@ -334,3 +334,29 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+let btn = document.querySelector(".sidebarBtn");
+let sideBar = document.querySelector(".sideBarDiv");
+
+let ul = document.createElement("ul");
+let liOne = document.createElement("li");
+let liTwo = document.createElement("li");
+let liThree = document.createElement("li");
+btn.addEventListener("click", () => {
+  sideBar.classList.toggle("hidde");
+
+  liOne.textContent = "Ana menu";
+  liTwo.textContent = "use";
+  liThree.textContent = "about";
+
+  ul.appendChild(liOne);
+  ul.appendChild(liTwo);
+  ul.appendChild(liThree);
+  sideBar.appendChild(ul);
+});
+
+let imageDiv = document.querySelector(".image-div");
+
+let image = document.createElement("img");
+image.setAttribute("src", "car.jpg");
+
+imageDiv.appendChild(image);
