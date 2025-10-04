@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 62.5%;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  i {
+    font-size: 2.5rem;
+  }
+  .cube {
+    color: red;
+  }
+  .trophy {
+    color: green;
+  }
+
+  .gift {
+    color: blue;
+  }
+  &__basic,
+  &__pro,
+  &__enterprise {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 2.5rem;
+  }
+  &__basic {
+    &--btn {
+      background-color: rgba(255, 0, 0, 0.469);
+      color: white;
+    }
+  }
+
+  &__pro {
+    &--btn {
+      background-color: rgba(0, 128, 0, 0.595);
+      color: white;
+    }
+  }
+  &__enterprise {
+    &--btn {
+      background-color: rgba(0, 0, 255, 0.525);
+      color: white;
+    }
+  }
+  .text {
+    font-size: 1.4rem;
+    color: #555;
+    margin: 8px 0;
+    text-align: center;
+    line-height: 2.2rem;
+  }
+
+  .num {
+    font-size: 3rem;
+  }
+  .header {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    border: 1px solid;
+    border-radius: 8rem;
+    padding: 1.4rem 5rem;
+  }
+}
