@@ -51,6 +51,9 @@ body {
   }
 
   &__pro {
+    padding: 1rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
     &--btn {
       background-color: rgba(0, 128, 0, 0.595);
       color: white;
