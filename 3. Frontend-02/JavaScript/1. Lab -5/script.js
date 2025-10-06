@@ -1,6 +1,7 @@
 // LAB:5 TASK
 // 1. **Stringin uzunluğunu tap**
 // Məsələn: `"hello"` → `5`
+
 const stringLength = (str) => str.length;
 console.log(stringLength("hello"));
 //////////////////////////////////////////////////
@@ -12,7 +13,7 @@ console.log(stringToUpperCase("hello"));
 // 3. **Stringi kiçik hərflərə çevir**
 // Məsələn: `"HeLLo"` → `"hello"`
 const stringToLowerCase = (str) => str.toLowerCase();
-console.log(stringToLowerCase("hello"));
+console.log(stringToLowerCase("HELLO"));
 //////////////////////////////////////////////////
 // 4. **İlk hərfi böyük yaz**
 // Məsələn: `"python"` → `"Python"`
@@ -29,31 +30,27 @@ console.log(strFirstCase("python"));
 // a
 // m
 // ```
-const strWrite = function (str) {
-  for (let i = 0; i < str.length; i++) {
-    console.log(str[i]);
-  }
-};
+const strWrite = (str) =>
+  str.split("").forEach((element) => console.log(element));
+
 strWrite("salam");
 //////////////////////////////////////////////////
 // 6. **Hərf sözdə neçəci indexdədir?**
 // Məsələn: `"banana"`, `"a"` → `1` (ilk tapılan index)
-const strIndex = (str) => str.indexOf("a");
-console.log(strIndex("banana"));
+const strIndex = (str, char) => str.indexOf(char);
+console.log(strIndex("banana", "a"));
+
 //////////////////////////////////////////////////
 // 7. **Bütün boşluqları “-” ilə əvəzlə**
 // Məsələn: `"hello world"` → `"hello-world"`
-function strReplece(str) {
-  return str.replaceAll(" ", "-");
-}
+const strReplece = (str) => str.replaceAll(" ", "-");
 console.log(strReplece("hello world"));
 //////////////////////////////////////////////////
 // 8. **Stringin ilk və son hərfini tap**
 // Məsələn: `"javascript"` → `"j - t"`
-function strAt(str) {
-  return str.at(0) + "-" + str.at(-1);
-}
-console.log(strAt("javascript"));
+const strFirstLast = (str) => str.at(0) + "_" + str.at(-1);
+console.log(strFirstLast("javascript"));
+
 //////////////////////////////////////////////////
 // 9. **Stringin son 2 hərfini qaytar**
 // Məsələn: `"hello"` → `"lo"`
@@ -110,6 +107,15 @@ const strRepate = function (str) {
 };
 console.log(strRepate("alma"));
 // // //////////////////////////////////////////////////
-// // // Bonus - String palindrom olub-olmadığını yoxla -
-// // // Bir söz tərsinə oxunanda da eyni qalırsa → palindromdur → nəticə true.
-// // // Əgər tərsinə oxunanda dəyişirsə → palindrom deyil → nəticə false.
+// Bonus - String palindrom olub-olmadığını yoxla -
+// Bir söz tərsinə oxunanda da eyni qalırsa → palindromdur → nəticə true.
+// Əgər tərsinə oxunanda dəyişirsə → palindrom deyil → nəticə false.
+
+function strPalindrom(str) {
+  if (str === str.split("").reverse().join("")) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(strPalindrom("level"));

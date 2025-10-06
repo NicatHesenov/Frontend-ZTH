@@ -1,76 +1,256 @@
+/*# sourceMappingURL=style.css.map *///fonts.cdnfonts.com/css/pp-neue-montreal");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: rgba(28, 74, 42, 1);
+  --secondary--color: rgba(255, 255, 255, 1);
+  --third-color: rgba(255, 255, 255, 0.7);
+  --black-color: #000;
+}
+
 html,
 body {
-  font-size: 62.5%;
+  font-size: 8px;
 }
 
-.title {
-  text-align: center;
-  font-size: 2rem;
-  margin-top: 2rem;
-}
-
-.container {
+.header {
   display: flex;
-  justify-content: space-evenly;
+  position: relative;
+  height: 10vh;
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+}
+.header__nav--logo {
+  margin: 15px;
+}
+.header__nav--list {
+  display: none;
+}
+.header__nav--icon {
+  position: absolute;
+  right: 80px;
+  top: 15px;
+}
+.header__nav--hamburgerContainer {
+  position: absolute;
+  right: 60px;
+  top: 9px;
+}
+.header__nav--hamburger {
+  width: 35px;
+  height: 6px;
+  background-color: var(--black-color);
+  border-radius: 10px;
+  position: absolute;
+  top: 15px;
+}
+.header__nav--hamburger::before {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 6px;
+  background-color: var(--black-color);
+  border-radius: 10px;
+}
+.header__nav--hamburger::after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 6px;
+  background-color: var(--black-color);
+  border-radius: 10px;
+}
+.header__nav--hamburger::before {
+  transform: translateY(-12px);
+}
+.header__nav--hamburger::after {
+  transform: translateY(12px);
+}
+.header .btn {
+  display: none;
+}
+
+.main__sectionOne {
+  display: flex;
+  justify-content: center;
   align-items: center;
-}
-.container i {
-  font-size: 2.5rem;
-}
-.container .cube {
-  color: red;
-}
-.container .trophy {
-  color: green;
-}
-.container .gift {
-  color: blue;
-}
-.container__basic, .container__pro, .container__enterprise {
-  display: flex;
   flex-direction: column;
+  background-color: var(--primary-color);
+}
+.main__sectionOne--title {
+  color: var(--secondary--color);
+  font-family: "PP Neue Montreal", sans-serif;
+  font-size: 6rem;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: -0.01em;
+  display: flex;
+}
+.main__sectionOne--text {
+  font-family: "PP Neue Montreal", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 25.2px;
+  letter-spacing: -0.01em;
+  text-align: justify;
+  color: rgb(140, 140, 140);
+}
+
+.sectionOne--img {
+  width: 100%;
+}
+
+.main__sectionTwo {
+  display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.8rem;
-  margin-top: 2.5rem;
+  flex-direction: column;
 }
-.container__basic--btn {
-  background-color: rgba(255, 0, 0, 0.469);
-  color: white;
+.main__sectionTwo--img {
+  margin-top: 20px;
+  width: 100%;
+  height: 100vh;
 }
-.container__pro {
-  padding: 1rem;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+.main__sectionTwo--container {
+  gap: 20px;
+  width: 100%;
 }
-.container__pro--btn {
-  background-color: rgba(0, 128, 0, 0.595);
-  color: white;
+.main__sectionTwo--title {
+  font-family: "PP Neue Montreal", sans-serif;
+  font-size: 6.25rem;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: -0.01em;
+  color: var(--black-color);
 }
-.container__enterprise--btn {
-  background-color: rgba(0, 0, 255, 0.525);
-  color: white;
+.main__sectionTwo--text {
+  font-family: "PP Neue Montreal", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 28.8px;
+  letter-spacing: -0.01em;
+  text-align: justify;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  color: rgb(140, 140, 140);
 }
-.container .text {
-  font-size: 1.4rem;
-  color: #555;
-  margin: 8px 0;
-  text-align: center;
-  line-height: 2.2rem;
+.main__sectionTwo--button {
+  border: 1px solid var(--secondary--color);
+  padding: 20px 200px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  font-family: "PP Neue Montreal", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 19.2px;
+  letter-spacing: -0.01em;
 }
-.container .num {
-  font-size: 3rem;
+.main__sectionTwo--button::after {
+  content: "↗";
+  margin-left: 8px;
+  font-size: 2.25rem;
 }
-.container .header {
-  font-size: 1.5rem;
-}
-.container .btn {
-  border: 1px solid;
-  border-radius: 8rem;
-  padding: 1.4rem 5rem;
+
+@media screen and (min-width: 993px) {
+  html,
+  body {
+    font-size: 8px;
+  }
+  .header {
+    width: 100%;
+    position: relative;
+  }
+  .header__nav--menu {
+    display: flex;
+    gap: 45px;
+  }
+  .header__nav--list {
+    min-height: 25vh;
+  }
+  .header__nav--logo {
+    margin: 15px;
+  }
+  .header__nav--list {
+    display: flex;
+    margin-top: 22px;
+    list-style: none;
+    gap: 25px;
+    font-family: "PP Neue Montreal", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.6px;
+    letter-spacing: -0.01em;
+    color: rgb(140, 140, 140);
+  }
+  .header__nav .list-item {
+    color: rgb(28, 74, 42);
+  }
+  .header__nav--icon {
+    display: none;
+  }
+  .header__nav--hamburgerContainer {
+    display: none;
+  }
+  .header__nav--button {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    right: 20px;
+    top: 9px;
+  }
+  .header__nav--loginBtn {
+    border: 1px solid rgb(224, 232, 224);
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-family: "PP Neue Montreal", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+    letter-spacing: -0.01em;
+    text-align: justify;
+  }
+  .header__nav--registerBtn {
+    background: 1px rgb(28, 74, 42);
+    color: white;
+    padding: 10px 35px;
+    border-radius: 8px;
+    font-family: "PP Neue Montreal", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+    letter-spacing: -0.01em;
+    text-align: justify;
+    border: none;
+  }
+  .header .btn {
+    display: flex;
+  }
+  .main__sectionOne {
+    display: flex;
+    flex-direction: row;
+  }
+  .main__sectionOne--container {
+    min-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main__sectionOne--img {
+    width: 50%;
+    height: 100px;
+  }
+  .main__sectionTwo {
+    display: flex;
+    flex-direction: row !important;
+    padding-top: 50px;
+  }
 }/*# sourceMappingURL=style.css.map */

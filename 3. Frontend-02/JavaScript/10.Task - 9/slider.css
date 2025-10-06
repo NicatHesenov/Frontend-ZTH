@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: antiquewhite;
+}
+body,
+html {
+  font-size: 62.5%;
+}
+.slide {
+  display: none;
+  text-align: center;
+  margin-top: 90px;
+  position: relative;
+}
+
+.active {
+  display: block;
+  text-align: center;
+  margin-top: 90px;
+  position: relative;
+}
+.btn-prev {
+  position: absolute;
+  left: 50rem;
+  top: 30%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.btn-next {
+  position: absolute;
+  right: 50rem;
+  top: 30%;
+  padding: 10px;
+  border-radius: 5px;
+}
