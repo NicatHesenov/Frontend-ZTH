@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 62.5%;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  width: 70vw;
+  margin: 4rem auto;
+  font-size: 2rem;
+
+  section {
+    flex: 1;
+  }
+  .bad-practice {
+    border-top: 3px solid #f87171;
+    &__title {
+      color: #f87171;
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+
+  .alternative {
+    border-top: 3px solid #4ade80;
+    &__title {
+      color: #4ade80;
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+
+  .accordion {
+    &__item {
+      border-bottom: 1px solid black;
+    }
+
+    &__btn {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 1.5rem 0;
+      font-size: 1.8rem;
+      font-weight: 600;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    &__content {
+      display: none;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    &__content.active {
+      display: block;
+    }
+
+    &__icon.active {
+      transform: rotate(180deg);
+    }
+
+    &__icon {
+      transition: transform 0.3s ease;
+    }
+  }
+}

@@ -69,6 +69,7 @@ console.table(result);
 // // 2.
 // // Array-dan yalnız cüt ədədləri seç.
 // // [1, 2, 3, 4, 5, 6] → [2, 4, 6]
+let newArr = [1, 2, 3, 4, 5, 6];
 // REDUCE METODU ILƏ
 const newFuncReduce = (arr) =>
   arr.reduce((acc, item) => {
@@ -78,21 +79,66 @@ const newFuncReduce = (arr) =>
     return acc;
   }, []);
 
-console.log(newFuncReduce([1, 2, 3, 4, 5, 6]));
-// //
+///////////////////////////////////////////////////////////////////////////////
 // FİLTER METODU İLƏ
-// const funFilter = function (arr) {
-//   let arrFilter = arr.filter((item) => item % 2 === 0);
+const funFilter = function (arr) {
+  let arrFilter = arr.filter((item) => item % 2 === 0);
 
-//   return arrFilter;
-// };
-// console.log(funFilter([1, 2, 3, 4, 5, 6]));
-// //
+  return arrFilter;
+};
+////////////////////////////////////////////////////////////
 // FOREACH METODU İLƏ YAZACAM
+
+const newFuncForEach = (arr) => {
+  let calc = [];
+
+  arr.forEach((item) => {
+    if (item % 2 === 0) calc.push(item);
+  });
+
+  return calc;
+};
+
+/////////////////////////////////////////////////////////
+// ARRAY FROM METODU ILƏ
+
+const newFuncArrayFrom = (arr) => {
+  let calc = [];
+  Array.from(arr, (item) => {
+    if (item % 2 === 0) calc.push(item);
+  });
+
+  return calc;
+};
+/////////////////////////////////////////////////////
+// forOf METODU ILƏ
+
+const newFuncForOf = (arr) => {
+  let calc = [];
+
+  for (let i of arr) {
+    if (i % 2 === 0) {
+      calc.push(i);
+    }
+  }
+  return calc;
+};
+
+const newResult = {
+  reduce: newFuncReduce(newArr),
+  forEach: newFuncForEach(newArr),
+  forOf: newFuncForOf(newArr),
+  arrayFrom: newFuncArrayFrom(newArr),
+};
+
+console.table(newResult);
 // //////////////////////////////////////////////////////////////////////////////////
 // // 3.
 // // Array-da mənfi ədəd olub-olmadığını yoxla.
 // // [1, 3, -2, 5] → true
+
+const findWithSome = (arr) => arr.some((item) => item < 0);
+console.log(findWithSome([1, 3, -2, 5]));
 
 // const funcSome = (arr) => arr.some((item) => item < 0);
 // console.log(funcSome([1, 3, -2, 5]));

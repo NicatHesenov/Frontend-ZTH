@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 62.5%;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  width: 70vw;
+  margin: 4rem auto;
+  font-size: 2rem;
+}
+.container section {
+  flex: 1;
+}
+.container .bad-practice {
+  border-top: 3px solid #f87171;
+}
+.container .bad-practice__title {
+  color: #f87171;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.container .alternative {
+  border-top: 3px solid #4ade80;
+}
+.container .alternative__title {
+  color: #4ade80;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.container .accordion__item {
+  border-bottom: 1px solid black;
+}
+.container .accordion__btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.container .accordion__content {
+  display: none;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.container .accordion__content.active {
+  display: block;
+}
+.container .accordion__icon.active {
+  transform: rotate(180deg);
+}
+.container .accordion__icon {
+  transition: transform 0.3s ease;
+}/*# sourceMappingURL=style.css.map */

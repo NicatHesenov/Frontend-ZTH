@@ -324,29 +324,56 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-let btn = document.querySelector(".sidebarBtn");
-let sideBar = document.querySelector(".sideBarDiv");
+// let btn = document.querySelector(".sidebarBtn");
+// let sideBar = document.querySelector(".sideBarDiv");
 
-let ul = document.createElement("ul");
-let liOne = document.createElement("li");
-let liTwo = document.createElement("li");
-let liThree = document.createElement("li");
-btn.addEventListener("click", () => {
-  sideBar.classList.toggle("hidde");
+// let ul = document.createElement("ul");
+// let liOne = document.createElement("li");
+// let liTwo = document.createElement("li");
+// let liThree = document.createElement("li");
+// btn.addEventListener("click", () => {
+//   sideBar.classList.toggle("hidde");
 
-  liOne.textContent = "Ana menu";
-  liTwo.textContent = "use";
-  liThree.textContent = "about";
+//   liOne.textContent = "Ana menu";
+//   liTwo.textContent = "use";
+//   liThree.textContent = "about";
 
-  ul.appendChild(liOne);
-  ul.appendChild(liTwo);
-  ul.appendChild(liThree);
-  sideBar.appendChild(ul);
+//   ul.appendChild(liOne);
+//   ul.appendChild(liTwo);
+//   ul.appendChild(liThree);
+//   sideBar.appendChild(ul);
+// });
+
+// let imageDiv = document.querySelector(".image-div");
+
+// let image = document.createElement("img");
+// image.setAttribute("src", "car.jpg");
+
+// imageDiv.appendChild(image);
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+const input = document.getElementById("input");
+const box = document.querySelector(".box");
+
+input.addEventListener("keydown", (e) => {
+  if (e.key == "a") {
+    box.style.backgroundColor = "blue";
+  } else if (e.key == "Backspace") {
+    box.style.backgroundColor = "green";
+  }
+  console.log("Basılan düymə:", e.key);
 });
 
-let imageDiv = document.querySelector(".image-div");
-
-let image = document.createElement("img");
-image.setAttribute("src", "car.jpg");
-
-imageDiv.appendChild(image);
+input.addEventListener("keyup", (e) => {
+  if (e.key === "a") {
+    box.style.backgroundColor = "red";
+  } else if (e.key == "Backspace") {
+    box.style.backgroundColor = "yellow";
+  }
+  console.log("Buraxılan düymə:", e.key);
+});
