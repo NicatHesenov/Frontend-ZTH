@@ -1,44 +1,48 @@
-const input = document.querySelector("#input");
 const plus = document.querySelector(".plus");
+const input = document.querySelector("#input");
 const box = document.querySelector(".box");
 
 plus.addEventListener("click", (e) => {
   e.preventDefault();
 
   const text = input.value.trim();
-  if (text === "") return;
+  if (text === "") alert("it is empty");
 
+  const textTask = document.createComment("span");
+  textTask.textContent = text;
+  // task
   const task = document.createElement("div");
   task.classList.add("task");
 
-  const taskText = document.createElement("span");
-  taskText.textContent = text;
+  const button = document.createElement("button");
+  button.classList.add("button");
 
-  const buttons = document.createElement("div");
-  buttons.classList.add("buttons");
+  // del
+  const del = document.createElement("span");
+  del.classList.add("delete");
+  del.textContent = "x";
 
-  const editBtn = document.createElement("span");
-  editBtn.textContent = "✎";
-  editBtn.classList.add("edit");
-
-  const delBtn = document.createElement("span");
-  delBtn.textContent = "×";
-  delBtn.classList.add("delete");
-
-  editBtn.addEventListener("click", () => {
-    const newText = prompt("Edit your task:", taskText.textContent);
-    taskText.textContent = newText.trim();
-  });
-
-  delBtn.addEventListener("click", () => {
+  // delete task
+  del.addEventListener("click", () => {
     task.remove();
   });
 
-  buttons.appendChild(editBtn);
-  buttons.appendChild(delBtn);
-  task.appendChild(taskText);
-  task.appendChild(buttons);
+  // edit
+  const edit = document.createElement("span");
+  edit.classList.add("edit");
+  edit.textContent = "🖋️";
+
   box.appendChild(task);
+  button.appendChild(del);
+  button.appendChild(edit);
+  task.appendChild(textTask);
+
+  console.log(del);
+  console.log(box);
+  console.log(task);
+  console.log(edit);
 
   input.value = "";
 });
+
+// Demək mən burada nə etməliyəm? İnputa yazı daxil etdikdə aşağıya əlavə olunmalıdır

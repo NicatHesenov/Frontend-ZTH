@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 62.5%;
+}
+
+.main__section {
+  display: flex;
+  justify-content: space-around;
+}
+.main .basket {
+  font-size: 4rem;
+  color: blue;
+}
+.main .title {
+  font-size: 2rem;
+}
+.main .plus {
+  color: black;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
