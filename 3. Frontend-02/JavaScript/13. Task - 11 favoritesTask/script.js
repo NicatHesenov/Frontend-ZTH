@@ -33,7 +33,7 @@ products.forEach((product) => {
   // product adlı divi HTML dəki section əlavə edirik
   mainSection.appendChild(pro);
 
-  // heart iconundan ibarət plus classını çağırırıq
+  // Hər product div-in öz daxilindəki .plus ikonunu tapmaq üçün (qlobal yox, lokal axtarış)
   const plus = pro.querySelector(".plus");
 
   // plus classına click eventi əlavə edirik
