@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-size: 62.5%;
+}
+
+form {
+  border: 1px solid white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 30%;
+  height: 22vh;
+  margin: 0 auto;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.inputText {
+  margin: 0 1rem;
+}
+span {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 1rem;
+  font-size: 1rem;
+}
+
+.btn {
+  margin: 0 1rem;
+  margin-top: 0.1rem;
+  padding: 0.3rem;
+  background-color: blue;
+  color: white;
+  border: none;
+}
+/////////////////////////////////////////
+
+.box-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  gap: 2rem;
+}
+.box-card {
+  margin-top: 2rem;
+  border: 1px solid white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 30%;
+  height: 12vh;
+  padding: 2rem 1rem;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.box-title {
+  font-size: 1.2rem;
+}
