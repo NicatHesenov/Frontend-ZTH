@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./scss/style.css" />
+  </head>
+  <body>
+    <!-- form -->
+    <form action="" class="form">
+      <h1 class="form__title">Işçi İdarəetmə Sistemi</h1>
+      <!-- container -->
+      <div class="form__container">
+        <div class="form__section">
+          <h2 class="form__section-title">Yeni İşçi Əlavə et</h2>
+          <!-- inputs -->
+          <div class="form__section-inputs">
+            <input
+              class="form__section-input name-surname"
+              type="text"
+              placeholder="Ad və Soyad"
+            />
+            <input
+              class="form__section-input age"
+              type="number"
+              placeholder="Yaş"
+            />
+            <input
+              class="form__section-input position"
+              type="text"
+              placeholder="Vəzifə"
+            />
+          </div>
+          <button type="submit" class="form__section-btn">Əlavə Et</button>
+        </div>
+        <!-- table -->
+        <div class="form__table-wrapper">
+          <table class="form__table">
+            <thead>
+              <tr>
+                <th>&#8470;</th>
+                <th>Ad və Soyad</th>
+                <th>Yaş</th>
+                <th>Vəzifə</th>
+                <th>Əməliyyatlar</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
+    </form>
+    <script src="./script.js"></script>
+  </body>
+</html>
