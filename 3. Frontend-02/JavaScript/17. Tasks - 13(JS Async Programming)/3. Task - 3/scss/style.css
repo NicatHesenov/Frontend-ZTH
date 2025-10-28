@@ -1,0 +1,60 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: black;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #eee;
+}
+
+.traffic-light__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 25rem;
+  width: 80px;
+  padding: 20px 0;
+  border-radius: 50px;
+  background-color: #2c3e50;
+}
+.traffic-light__container-boxes {
+  position: relative;
+  height: 45px;
+  width: 45px;
+  border-radius: 100%;
+  background-color: #1d1d1d;
+  margin-top: 1rem;
+  opacity: 0.2;
+  transition: opacity 0.3s ease;
+}
+.traffic-light__container .box1 {
+  background-color: red;
+  box-shadow: 0 0 20px 2px #ff3822;
+}
+.traffic-light__container .box2 {
+  background-color: yellow;
+  box-shadow: 0 0 20px 2px yellow;
+}
+.traffic-light__container .box3 {
+  background-color: green;
+  box-shadow: 0 0 20px 2px green;
+}
+.traffic-light__container .active {
+  opacity: 1;
+  box-shadow: 0 0 60px 10px currentColor; /* işıq effekti */
+}/*# sourceMappingURL=style.css.map */
