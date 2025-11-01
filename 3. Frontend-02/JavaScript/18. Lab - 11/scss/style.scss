@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.section {
+  // container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    &-title {
+      font-size: 3rem;
+      color: blue;
+    }
+  }
+
+  //   searching
+  &__search {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: white;
+    gap: 0.5rem;
+
+    span {
+      color: gray;
+      font-size: 1.6rem;
+    }
+    &-input {
+      outline: none;
+      border: none;
+      font-size: 2rem;
+    }
+  }
+
+  //   characters
+  &__characters {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    &-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem;
+      gap: 1.2rem;
+      text-align: center;
+
+      &__img {
+        width: 70%;
+        height: 200px;
+        object-fit: contain;
+      }
+
+      &__gender {
+        color: green;
+        font-weight: bold;
+      }
+    }
+  }
+  .not-found {
+    color: #ff4d4d;
+    font-size: 1.6rem;
+    text-align: center;
+    margin-top: 2rem;
+    font-weight: 600;
+  }
+  .btn {
+    border: none;
+    background-color: green;
+    color: white;
+    padding: 1rem;
+    border-radius: 10%;
+    margin: 2rem;
+    cursor: pointer;
+  }
+}
