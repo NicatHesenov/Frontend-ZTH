@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+.background-video #bg-video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+form {
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+form #cityInput {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.6rem;
+}
+form .btn {
+  width: 100%;
+  padding: 1rem;
+  cursor: pointer;
+  background: blue;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+}
+form .result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+form .result__title {
+  font-size: 2.4rem;
+}
+form .result__deg, form .result__description {
+  font-size: 1.6rem;
+}
+form .result img {
+  width: 120px;
+  height: 120px;
+}/*# sourceMappingURL=style.css.map */
