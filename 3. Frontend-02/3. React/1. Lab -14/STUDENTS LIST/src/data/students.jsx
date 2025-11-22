@@ -1,2 +1,2 @@
-const students = ["Nicat", "Məhəmməd", "Mehman"];
+const students = ["Nicat", "Məhəmməd", "Mehman", "Royal"];
 export default students;
