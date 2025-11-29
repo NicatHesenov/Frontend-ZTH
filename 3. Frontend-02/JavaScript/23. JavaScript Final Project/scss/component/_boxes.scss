@@ -1,0 +1,36 @@
+.boxes {
+  border: 1px dashed;
+  @include dynamic-flex(none, center, center, column, 3rem);
+  margin-top: 3rem;
+  padding: 10rem;
+  border-radius: 2rem;
+  font-size: clamp(1.5rem, 0.5rem, 2rem);
+  text-align: center;
+
+  padding: 60px 20px;
+  margin-top: 20px;
+  border: 1px solid $gray-border;
+  border-radius: 8px;
+  i {
+    font-size: 5rem;
+    color: lightgray;
+  }
+  &__textWarn {
+    color: gray;
+  }
+
+  .boxes__textİnfo {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+
+  .boxes__textWarn {
+    color: #777;
+  }
+
+  .fa-regular.fa-circle {
+    font-size: 2em;
+    color: #ccc;
+  }
+}

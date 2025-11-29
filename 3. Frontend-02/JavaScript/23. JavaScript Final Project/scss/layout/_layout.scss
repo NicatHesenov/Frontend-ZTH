@@ -1,0 +1,77 @@
+.container {
+  width: min(100%, 1200px);
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.container__content {
+  @include dynamic-flex(flex, null, null, column);
+}
+.nav {
+  @include dynamic-flex(flex, space-between, center);
+  font-size: 1.5rem;
+
+  .mood {
+    cursor: pointer;
+    &__light {
+      border: 1px solid;
+      padding: 1rem;
+      border-radius: 50%;
+      box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+        rgba(0, 0, 0, 0.24) 0px 1px 2px;
+      border: none;
+    }
+
+    &__night {
+      display: none;
+      color: white;
+    }
+  }
+}
+
+.active {
+  background-color: black;
+  display: block !important;
+  color: white;
+  h1,
+  h3,
+  p,
+  span,
+  a {
+    color: white;
+  }
+  input,
+  select {
+    border: 1px solid;
+    color: white !important;
+    background-color: black !important; // Məsələn, tünd boz fon
+  }
+}
+.hide {
+  display: none;
+}
+
+.searchInput__container {
+  .button-container {
+    display: flex;
+    gap: 8px;
+
+    button {
+      transition: all 0.2s ease;
+      border: 1px solid $gray-border;
+      background-color: $white;
+      color: $text-default;
+      cursor: pointer;
+      padding: 8px 16px;
+      border-radius: 4px;
+
+      &.active {
+        background-color: $blue-primary;
+        color: $white;
+        border-color: $blue-primary;
+        transform: none;
+        box-shadow: none;
+      }
+    }
+  }
+}

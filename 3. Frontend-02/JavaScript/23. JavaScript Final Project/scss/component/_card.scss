@@ -1,0 +1,129 @@
+.cards__row {
+  margin-top: 5rem;
+  @include dynamic-flex(flex, space-evenly, null, null, 2rem);
+  font-size: 1.5rem;
+
+  .card {
+    width: 370px;
+    padding: 3rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 2rem;
+    @include dynamic-flex(flex, space-between, center);
+
+    .title {
+      font-size: 1.5rem;
+    }
+    .num {
+      margin-top: 1rem;
+      font-size: 3rem;
+    }
+
+    .icon {
+      border: 1px solid;
+      border-radius: 40%;
+      font-size: 2.5rem;
+      padding: 1rem;
+    }
+
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+  }
+}
+
+$card-themes: (
+  gray: (
+    var(--gray),
+    var(--gray-bg),
+  ),
+  blue: (
+    var(--blue),
+    var(--blue-bg),
+  ),
+  green: (
+    var(--green),
+    var(--green-bg),
+  ),
+);
+
+@each $name, $colors in $card-themes {
+  .card--#{$name} {
+    border: 1px solid nth($colors, 1);
+
+    .title,
+    .num {
+      color: nth($colors, 1);
+    }
+
+    .icon {
+      border-color: nth($colors, 1);
+      background: nth($colors, 2);
+      color: nth($colors, 1);
+    }
+  }
+}
+
+// TASK
+.task {
+  border: 1px solid black;
+  background-color: var(--box-shadow);
+  padding: 2rem;
+  border-radius: 2rem;
+  margin-top: 2rem;
+
+  &__container {
+    @include dynamic-flex(flex, space-between, center);
+    font-size: 1rem;
+    &--contents {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 1.5rem;
+    }
+    &--details {
+      display: flex;
+      gap: 2rem;
+
+      .degr {
+        border: 1px solid green;
+        background-color: green;
+        color: white;
+        padding: 1rem;
+        border-radius: 2rem;
+      }
+
+      .pen,
+      .delet {
+        font-size: 2rem;
+        cursor: pointer;
+      }
+
+      .delet {
+        color: red;
+      }
+    }
+  }
+}
+
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: white;
+  padding: 2rem 4rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s ease;
+  font-size: 1.5rem;
+  h4,
+  p {
+    color: black;
+  }
+}
+
+.toast.show {
+  opacity: 1;
+  pointer-events: auto;
+}

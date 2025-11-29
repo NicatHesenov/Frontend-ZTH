@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./scss/style.css" />
+  </head>
+  <body>
+    <!--  -->
+    <section class="container">
+      <!--  -->
+      <div class="container__content">
+        <!--  -->
+        <div class="nav">
+          <div class="text">
+            <h1 class="text__title">Tapşırıq Meneceri</h1>
+            <p class="text__p">Tapşırıqlarınızı effektiv idarə edin</p>
+          </div>
+          <div class="mood">
+            <span class="mood__light light"
+              ><i class="fa-regular fa-moon"></i
+            ></span>
+            <span class="mood__night dark"
+              ><i class="fa-solid fa-sun"></i
+            ></span>
+          </div>
+        </div>
+        <!--  -->
+        <div class="cards">
+          <div class="cards__row">
+            <div class="card card--gray">
+              <div class="text">
+                <h3 class="title">Ümumi Tapşırıq</h3>
+                <p class="num">0</p>
+              </div>
+              <span class="icon"><i class="fa-regular fa-circle"></i></span>
+            </div>
+            <div class="card card--blue">
+              <div class="text">
+                <h3 class="title">Aktiv</h3>
+                <p class="num">0</p>
+              </div>
+              <span class="icon"><i class="fa-regular fa-circle"></i></span>
+            </div>
+            <div class="card card--green">
+              <div class="text">
+                <h3 class="title">Tamamlandı</h3>
+                <p class="num">0</p>
+              </div>
+              <span class="icon"
+                ><i class="fa-regular fa-circle-check"></i
+              ></span>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="addInput__container">
+          <input
+            class="addInput__container--input"
+            type="text"
+            placeholder="Yeni tapşırıq əlavə edin..."
+          />
+          <select name="search-select" id="search-select">
+            <option value="Aşağı">Aşağı</option>
+            <option value="Orta">Orta</option>
+            <option value="Yüksək">Yüksək</option>
+          </select>
+
+          <button class="addInput__container--btn">
+            <span>+</span> Əlavə et
+          </button>
+        </div>
+        <!--  -->
+        <div class="searchInput__container">
+          <div class="searchInput__container--inputContent">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+              type="text"
+              placeholder="Tapşırıq axtar..."
+              class="searchInput__container--input"
+            />
+          </div>
+          <div class="button-container">
+            <button class="searchInput__container--allBtn">Hamısı</button>
+            <button class="searchInput__container--activeBtn">Aktiv</button>
+            <button class="searchInput__container--completedBtn">
+              Tamamlandı
+            </button>
+            <button class="searchInput__container--dowlandBtn">
+              <i class="fa-solid fa-download"></i>
+            </button>
+            <button class="searchInput__container--uploaddBtn">
+              <i class="fa-solid fa-upload"></i>
+            </button>
+          </div>
+        </div>
+        <!--  -->
+
+        <div class="boxes">
+          <i class="fa-regular fa-circle"></i>
+
+          <p class="boxes__textİnfo">Heç bir tapşırıq tapılmadı</p>
+          <p class="boxes__textWarn">Yeni tapşırıq əlavə etməklə başlayın</p>
+        </div>
+        <!--  -->
+
+        <!-- <div class="task">
+          <div class="task__container">
+            <div class="task__container--contents">
+              <input type="checkbox" /> <span>cwwvw</span>
+            </div>
+            <div class="task__container--details">
+              <span class="degr">Yüksək</span>
+              <span class="pen">🖋️</span>
+              <span class="delet">🗑️</span>
+            </div>
+          </div>
+        </div> -->
+
+        <!--  -->
+      </div>
+      <div class="toast"></div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>
