@@ -1,0 +1,52 @@
+.product-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+/* .card-container {
+  border: 1px solid;
+  background-color: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+} */
+h2 {
+  font-size: 15px;
+}
+.old-price {
+  text-decoration: line-through;
+  color: gray;
+  margin-right: 5px;
+}
+
+.new-price {
+  color: red;
+  font-weight: bold;
+}
+
+.normal-price {
+  font-weight: bold;
+}
+
+.img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.addToCard {
+  border: none;
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.dutOfStuck {
+  border: none;
+  background-color: gray;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  opacity: 0.3;
+  cursor: pointer;
+}
