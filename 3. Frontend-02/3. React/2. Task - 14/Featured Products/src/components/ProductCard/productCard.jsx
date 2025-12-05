@@ -5,7 +5,6 @@ function ProductCard({ name, price, discountPrice, isStock, imageUrl }) {
       <div className="card-container">
         <img className="img" src={imageUrl} alt="" />
         <h2>{name}</h2>
-        <p>{price}</p>
         <p className="price">
           {discountPrice ? (
             <>
