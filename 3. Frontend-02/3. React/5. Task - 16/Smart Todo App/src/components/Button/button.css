@@ -1,0 +1,21 @@
+.btn {
+  margin-left: 1rem;
+  padding: 1rem 1.5rem;
+  border: none;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.close {
+  margin-left: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 1rem;
+  border: 1px solid;
+  background: transparent;
+}

@@ -1,0 +1,11 @@
+.toast {
+  display: inline-block;
+  position: fixed;
+  border: 1px solid;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 2rem;
+  border-left: 15px solid green;
+  top: 20px;
+  right: 20px;
+}
