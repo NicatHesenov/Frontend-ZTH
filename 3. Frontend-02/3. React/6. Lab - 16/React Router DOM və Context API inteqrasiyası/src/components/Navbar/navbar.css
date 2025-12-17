@@ -1,0 +1,22 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid;
+  background-color: gray;
+}
+.linkContainer {
+  display: flex;
+  gap: 20px;
+}
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+select {
+  padding: 5px 10px;
+}
+button {
+  padding: 3px 5px;
+}
