@@ -1,0 +1,160 @@
+:root {
+  --bg-light: #dbe1e6;
+  --border-color: #bbc2ce;
+  --border-bgColor: blue;
+}
+
+.summary-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  width: 100%;
+  max-width: 420px;
+  gap: 1rem;
+}
+
+.summary-cards {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Hər bir kart */
+.summary-card-item {
+  width: 100%;
+  background-color: var(--bg-light);
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+  padding: 1rem;
+}
+
+.summary-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.summary-card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.summary-card-delete {
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.summary-card-delete:hover {
+  color: #ff4444;
+}
+
+.summary-card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.summary-card-counter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.summary-card-minus,
+.summary-card-plus {
+  border: none;
+  background-color: white;
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: transform 0.1s;
+}
+
+.summary-card-minus:hover,
+.summary-card-plus:hover {
+  transform: scale(1.05);
+}
+
+.summar-card-num {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+  min-width: 20px;
+  text-align: center;
+}
+
+.summary-card-total {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--border-bgColor);
+  margin: 0;
+}
+
+/* Footer bölməsi */
+.summary-footer {
+  width: 100%;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.summary-footer-header,
+.summary-footer-result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.summary-footer-title,
+.summary-footer-text {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.summary-footer-count,
+.summary-footer-amount {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.summary-footer-amount {
+  color: var(--border-bgColor);
+}
+
+.summary-btn {
+  border: none;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: var(--border-bgColor);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.summary-btn:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.summary-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

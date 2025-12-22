@@ -1,0 +1,49 @@
+:root {
+  --color: rgba(0, 0, 0, 0.68);
+  --btn-primary: #0056b3;
+  --btn-teal: #0083a3;
+  --btn-color: #fff;
+  --border-color: #bbc2ce;
+}
+
+.filter-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+.filter-content {
+  display: flex;
+  gap: 1rem;
+}
+.filter-icon {
+  color: var(--color);
+}
+.filter-text {
+  color: var(--color);
+}
+.filter-categories {
+  display: flex;
+  gap: 1rem;
+}
+
+.filter-btn {
+  border: 1px solid var(--border-color);
+  background: transparent;
+  border-radius: 10%;
+  padding: 1rem;
+}
+
+.filter-btn:hover {
+  background-color: var(--btn-teal);
+  color: white;
+}
+.active {
+  background-color: blue;
+  color: white;
+  border: 1px solid var(--border-color);
+  border-radius: 10%;
+  padding: 1rem;
+}

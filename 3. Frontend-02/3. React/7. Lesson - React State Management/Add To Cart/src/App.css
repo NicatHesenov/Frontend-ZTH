@@ -1,0 +1,9 @@
+.cart-contianer {
+  display: flex;
+  gap: 5rem;
+  margin-top: 2rem;
+}
+
+button {
+  cursor: pointer;
+}
