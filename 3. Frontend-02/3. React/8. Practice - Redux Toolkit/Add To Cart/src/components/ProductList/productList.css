@@ -1,0 +1,21 @@
+.productList-centent {
+  display: flex;
+  gap: 5rem;
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.prdocuts-name {
+  color: red;
+}
+.products-price {
+  color: blue;
+}
