@@ -1,0 +1,40 @@
+.fruitList-btn {
+  display: flex;
+  gap: 2rem;
+}
+.fruitCard-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.fruits {
+  border: 1px solid;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background-color: #ffff;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.active {
+  border: 1px solid;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.active:hover,
+.fruits:hover {
+  transform: scale(1.1);
+}
