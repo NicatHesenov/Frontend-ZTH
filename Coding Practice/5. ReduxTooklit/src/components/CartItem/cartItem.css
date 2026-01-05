@@ -1,0 +1,13 @@
+.cartItem-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.cartItem-contant {
+  display: flex;
+  align-items: center;
+}
+.btn {
+  width: 50px;
+  height: 50 px;
+}

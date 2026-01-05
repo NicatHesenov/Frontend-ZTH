@@ -1,0 +1,18 @@
+.basket {
+  width: 300px;
+  height: 680px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.basket-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 5px;
+}
+.basket-empty-content {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
